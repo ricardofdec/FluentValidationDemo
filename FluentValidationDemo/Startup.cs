@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using FluentValidation.AspNetCore;
+using Microsoft.OpenApi.Models;
 
 namespace FluentValidationDemo
 {
@@ -17,6 +18,22 @@ namespace FluentValidationDemo
                 fv.RunDefaultMvcValidationAfterFluentValidationExecutes = false;
                 fv.RegisterValidatorsFromAssemblyContaining<Startup>();
             });
+
+            services.AddSwaggerGen(c => {
+
+                c.SwaggerDoc("v1",
+                    new OpenApiInfo
+                    {
+                        Title = "FluentValidation",
+                        Version = "v1",
+                        Description = "Exemplo com FluentValidation",
+                        Contact = new OpenApiContact
+                        {
+                            Name = "Ricardo Castro - Sofware Developer",
+                            Email = "ricardofc.ti@gmail.com",
+                        }
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -26,6 +43,11 @@ namespace FluentValidationDemo
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "MyPets V1");
+            });
 
             app.UseHttpsRedirection();
             app.UseRouting();

@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidationDemo", "FluentValidationDemo\FluentValidationDemo.csproj", "{9C819C5F-00FA-40FC-BC42-E18810DD804F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFluentValidationDemo", "TestFluentValidationDemo\TestFluentValidationDemo.csproj", "{A39DACE8-3A33-4D46-BB95-AFCC5C8B589F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{9C819C5F-00FA-40FC-BC42-E18810DD804F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C819C5F-00FA-40FC-BC42-E18810DD804F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C819C5F-00FA-40FC-BC42-E18810DD804F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A39DACE8-3A33-4D46-BB95-AFCC5C8B589F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A39DACE8-3A33-4D46-BB95-AFCC5C8B589F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A39DACE8-3A33-4D46-BB95-AFCC5C8B589F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A39DACE8-3A33-4D46-BB95-AFCC5C8B589F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
